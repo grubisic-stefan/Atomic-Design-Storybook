@@ -17,9 +17,9 @@ export default {
 const Template: ComponentStory<typeof Avatar> = (args) => (
   <>
     <h3 style={{ margin: "20px 0" }}>Type:img</h3>
-    <Avatar {...args} imgUrl="./assets/imgs/p2.jpg" />
+    <Avatar {...args} img={img} />
     <h3 style={{ margin: "20px 0" }}>Type:Letter</h3>
-    <Avatar {...args} imgUrl="./assets/imgs/p2.jpg">
+    <Avatar {...args} img={img}>
       UK
     </Avatar>
   </>
@@ -40,35 +40,30 @@ const TemplateSize: ComponentStory<typeof Avatar> = (args) => (
 const TemplateType: ComponentStory<typeof Avatar> = (args) => (
   <>
     <h3 style={{ margin: "20px 0" }}>Type: circle</h3>
-    <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+    <Avatar size="md" img={img} />
 
     <h3 style={{ margin: "20px 0" }}>Type: square</h3>
-    <Avatar size="md" type="square" imgUrl="./assets/imgs/p2.jpg" />
+    <Avatar size="md" type="square" img={img} />
     <h3 style={{ margin: "20px 0" }}>Type: square & rounded: md</h3>
 
-    <Avatar
-      rounded="md"
-      size="md"
-      type="square"
-      imgUrl="./assets/imgs/p2.jpg"
-    />
+    <Avatar rounded="md" size="md" type="square" img={img} />
   </>
 );
 const TemplateGroup: ComponentStory<typeof AvatarGroup> = (args) => (
   <>
     <h3 style={{ margin: "20px 0" }}>All Avatar</h3>
     <AvatarGroup {...args}>
-      <Avatar hoverEffect={true} size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar hoverEffect={true} size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar hoverEffect={true} size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar hoverEffect={true} size="md" img={img} />
+      <Avatar hoverEffect={true} size="md" img={img} />
+      <Avatar hoverEffect={true} size="md" img={img} />
     </AvatarGroup>
     <h3 style={{ margin: "20px 0" }}>Max No Avatar</h3>
     <AvatarGroup max={3} {...args}>
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
     </AvatarGroup>
     <h3 style={{ margin: "20px 0" }}>
       Collapse & collapseBorder & collapseColor
@@ -80,11 +75,11 @@ const TemplateGroup: ComponentStory<typeof AvatarGroup> = (args) => (
       max={3}
       {...args}
     >
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
+      <Avatar size="md" img={img} />
     </AvatarGroup>
   </>
 );
@@ -92,55 +87,55 @@ const TemplateStatus: ComponentStory<typeof AvatarGroup> = (args) => (
   <>
     <h3 style={{ margin: "20px 0" }}>Status Active</h3>
     <AvatarStatus status="active">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Status AFK</h3>
     <AvatarStatus status="afk">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Status DND</h3>
     <AvatarStatus status="dnd">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Status OFF</h3>
     <AvatarStatus status="off">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Status NONE</h3>
     <AvatarStatus status="none">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Status position tr</h3>
     <AvatarStatus position="tr" status="active">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Status tl</h3>
     <AvatarStatus position="tl" status="dnd">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Status br</h3>
     <AvatarStatus position="br" status="off">
-      <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+      <Avatar size="md" img={img} />
     </AvatarStatus>
     <h3 style={{ margin: "20px 0" }}>Group whit status</h3>
     <AvatarGroup max={3} {...args}>
       <AvatarStatus status="afk">
-        <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+        <Avatar size="md" img={img} />
       </AvatarStatus>
       <AvatarStatus status="active">
-        <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+        <Avatar size="md" img={img} />
       </AvatarStatus>
       <AvatarStatus status="afk">
-        <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+        <Avatar size="md" img={img} />
       </AvatarStatus>
       <AvatarStatus status="active">
-        <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+        <Avatar size="md" img={img} />
       </AvatarStatus>
       <AvatarStatus status="afk">
-        <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+        <Avatar size="md" img={img} />
       </AvatarStatus>
       <AvatarStatus status="active">
-        <Avatar size="md" imgUrl="./assets/imgs/p2.jpg" />
+        <Avatar size="md" img={img} />
       </AvatarStatus>
     </AvatarGroup>
   </>
