@@ -1,0 +1,39 @@
+.ACTimeLine__wrapper {
+  padding: 24px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ACTimeLine__time-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #678bd4;
+}
+.ACTimeLine__time-point {
+  display: flex;
+  height: 100%;
+}
+.ACTimeLine__time-line {
+  height: 100%;
+  width: 2px;
+  background-color: #678bd4;
+  margin: 10px 0;
+}
+.ACTimeLine__time-dotLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+.ACTimeLine__left-label,
+.ACTimeLine__right-label {
+  width: 100px;
+}
+.ACTimeLine__left-label {
+  text-align: right;
+}
+.ACTimeLine__time-point--last {
+  height: max-content;
+}

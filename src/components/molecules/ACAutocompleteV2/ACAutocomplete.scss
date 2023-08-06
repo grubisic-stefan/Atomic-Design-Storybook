@@ -1,0 +1,27 @@
+.ACAutocomplete__dropDown--startOpening,
+.ACAutocomplete__dropDown--closed {
+  opacity: 0;
+  top: calc(100% - 5px);
+}
+.ACAutocomplete__dropDown--opened,
+.ACAutocomplete__dropDown--startClosing {
+  opacity: 1;
+  top: calc(100% + 5px);
+}
+.ACAutocomplete__dropDown {
+  width: 100%;
+  margin: 0;
+  padding: 8px 0;
+  list-style-type: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: visible;
+  position: absolute;
+  left: 0;
+  z-index: 100;
+
+  input {
+    margin-right: 8px;
+    pointer-events: none;
+  }
+}

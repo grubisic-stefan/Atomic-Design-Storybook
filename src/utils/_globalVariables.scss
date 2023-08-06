@@ -1,0 +1,54 @@
+$color-primary: #25566b;
+$color-primary-light: #d9e8ee;
+$color-secondary: #eeff00;
+$color-secondary-light: #fbffc4;
+$color-success: #3ac656;
+$color-success-light: #dcf7e2;
+$color-error: #d03737;
+$color-error-light: #f7dede;
+
+$color-gray-100: #ececec;
+$color-gray-200: #d5d5d5;
+$color-gray-300: #c6c6c6;
+$color-gray-400: #acacac;
+$color-gray-500: #8c8c8c;
+
+// USE THESE VARIABLES IN YOUR SCSS FILES
+:root {
+  // Colors
+  --color-text: #333;
+  --color-primary: #25566b;
+  --color-primary-light: #d9e8ee;
+  --color-secondary: #eeff00;
+  --color-secondary-light: #fbffc4;
+  --color-success: #3ac656;
+  --color-success-light: #dcf7e2;
+  --color-error: #d03737;
+  --color-error-light: #f7dede;
+  --color-gray: #d5d5d5;
+  --color-gray-100: #ececec;
+  --color-gray-200: #d5d5d5;
+  --color-gray-300: #c6c6c6;
+  --color-gray-400: #acacac;
+  --color-gray-500: #8c8c8c;
+
+  //   Fonts
+  --main-font: "Roboto", sans-serif;
+
+  //Sizes, padding margin.....
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s7: 28px;
+  --s8: 32px;
+  --s9: 36px;
+  --s10: 40px;
+  --s11: 44px;
+  --s12: 48px;
+  --s13: 52px;
+  --s14: 56px;
+  --s15: 60px;
+}

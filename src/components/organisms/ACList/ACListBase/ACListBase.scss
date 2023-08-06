@@ -1,0 +1,133 @@
+@use "../../../../utils/globalVariables" as global;
+
+.AC-List {
+  background-color: white;
+  border-radius: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.AC-List h2 {
+  margin: 0;
+}
+
+.AC-List select {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.AC-List-Header {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px 12px 0px 0px;
+  select {
+    padding: 15px;
+  }
+  > div > div button {
+    background-color: transparent;
+  }
+}
+
+.AC-List-Header-color-primary {
+  background-color: global.$color-primary;
+}
+
+.AC-List-Header-color-secondary {
+  background-color: global.$color-secondary;
+}
+
+.AC-List-Header-Title {
+  flex-grow: 1;
+}
+
+.AC-List-Items {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin: 0px 1px;
+
+  > div {
+    padding: 5px 7px;
+  }
+}
+
+.AC-List-Items-noResults {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.AC-List-Items-Item {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid global.$color-gray-300;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.AC-List-Items-Item-Searched {
+  color: black;
+  background-color: yellow;
+}
+
+.AC-List-Items-Item-Data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 12px;
+  flex-grow: 1;
+  transition: 0.2s;
+  height: 100%;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    padding-left: 20px;
+    margin: 0px;
+    // background-color: #77c0eb24;
+    outline: 1px solid rgb(18, 105, 124);
+  }
+}
+
+.AC-List-Items-Item-Title-color-primary {
+  color: global.$color-primary;
+}
+
+.AC-List-Items-Item-Title-color-secondary {
+  color: global.$color-secondary;
+}
+
+.AC-List-Items-Item-Description {
+  color: global.$color-gray-500;
+  font-size: 14px;
+}
+
+.AC-List-Items-Item-Icons {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid global.$color-gray-300;
+  padding: 5px;
+}
+
+.AC-List-Pagination {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0px 0px 12px 12px;
+  padding: 4px 15px;
+  margin: 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin-top: 1px;
+}
+
+.AC-List-Pagination-RowsSelect {
+  flex-grow: 1;
+}

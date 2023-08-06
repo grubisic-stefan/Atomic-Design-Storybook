@@ -1,0 +1,108 @@
+@use "../../../utils/globalVariables" as global;
+
+.AC-Pagination {
+  display: flex;
+  user-select: none;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+}
+
+.AC-Pagination > * {
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+  border: 1px solid transparent;
+  box-sizing: content-box;
+
+  &:hover {
+    background-color: global.$color-gray-200;
+  }
+}
+
+.AC-PaginationItem-selected-primary-text {
+  background-color: global.$color-primary;
+  color: white;
+
+  &:hover {
+    background-color: global.$color-primary;
+  }
+}
+
+.AC-PaginationItem-selected-secondary-text {
+  background-color: global.$color-secondary;
+  color: white;
+
+  &:hover {
+    background-color: global.$color-secondary;
+  }
+}
+
+.AC-PaginationItem-selected-primary-outlined {
+  border: 1px solid global.$color-primary;
+  color: black;
+  background-color: global.$color-primary-light;
+
+  &:hover {
+    background-color: global.$color-primary-light;
+  }
+}
+
+.AC-PaginationItem-selected-secondary-outlined {
+  border: 1px solid global.$color-secondary;
+  background-color: global.$color-secondary-light;
+  color: black;
+
+  &:hover {
+    background-color: global.$color-secondary-light;
+  }
+}
+
+.AC-Pagination > .disabled {
+  cursor: default;
+  color: global.$color-gray-300;
+  user-select: none;
+  pointer-events: none;
+  select &:hover {
+    background-color: transparent;
+  }
+}
+
+.AC-Pagination-threeDots {
+  cursor: default;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.AC-PaginationItem-shape-rounded {
+  border-radius: 10%;
+}
+
+.AC-PaginationItem-shape-circular {
+  border-radius: 50%;
+}
+
+.AC-PaginationItem-size-small {
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+}
+
+.AC-PaginationItem-size-medium {
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.AC-PaginationItem-size-large {
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+}

@@ -1,0 +1,16 @@
+.ACAvatar__status{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    border-radius: 50%;
+    
+   
+}
+.ACAvatar__status-dot{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    z-index: 999999;
+    border-radius: 50%;
+    border: 2px solid black;
+}

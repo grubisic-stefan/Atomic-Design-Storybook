@@ -1,0 +1,186 @@
+@use "../../../utils/globalVariables" as global;
+
+.AC-Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 0;
+  width: 100%;
+
+  &:disabled {
+    cursor: not-allowed;
+    color: global.$color-gray-200;
+    border: 0;
+    box-shadow: none !important;
+  }
+  &:disabled:hover {
+    background-color: transparent;
+  }
+}
+
+.AC-Button-primary {
+  color: global.$color-primary;
+}
+
+.AC-Button-secondary {
+  color: global.$color-secondary;
+}
+
+.AC-Button-contained-primary {
+  color: white;
+  background-color: global.$color-primary;
+  box-shadow: 1px 1px 5px gray;
+
+  &:hover {
+    box-shadow: 2px 2px 5px gray;
+  }
+}
+
+.AC-Button-outlined-primary {
+  color: global.$color-primary;
+  background-color: transparent;
+  border: 1px solid global.$color-primary;
+
+  &:hover {
+    background-color: global.$color-primary-light;
+  }
+}
+
+.AC-Button-text-primary {
+  color: global.$color-primary;
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    background-color: global.$color-primary-light;
+  }
+}
+
+.AC-Button-contained-secondary {
+  color: white;
+  background-color: global.$color-secondary;
+  box-shadow: 1px 1px 5px gray;
+
+  &:hover {
+    box-shadow: 2px 2px 5px gray;
+  }
+}
+
+.AC-Button-outlined-secondary {
+  color: global.$color-secondary;
+  background-color: transparent;
+  border: 1px solid global.$color-secondary;
+
+  &:hover {
+    background-color: global.$color-secondary-light;
+  }
+}
+
+.AC-Button-text-secondary {
+  color: global.$color-secondary;
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    background-color: global.$color-secondary-light;
+  }
+}
+
+.AC-Button-contained-success {
+  color: white;
+  background-color: global.$color-success;
+  box-shadow: 1px 1px 5px gray;
+
+  &:hover {
+    box-shadow: 2px 2px 5px gray;
+  }
+}
+
+.AC-Button-outlined-success {
+  color: global.$color-success;
+  background-color: transparent;
+  border: 1px solid global.$color-success;
+
+  &:hover {
+    background-color: global.$color-success-light;
+  }
+}
+
+.AC-Button-text-success {
+  color: global.$color-success;
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    background-color: global.$color-success-light;
+  }
+}
+
+.AC-Button-contained-error {
+  color: white;
+  background-color: global.$color-error;
+  box-shadow: 1px 1px 5px gray;
+
+  &:hover {
+    box-shadow: 2px 2px 5px gray;
+  }
+}
+
+.AC-Button-outlined-error {
+  color: global.$color-error;
+  background-color: transparent;
+  border: 1px solid global.$color-error;
+
+  &:hover {
+    background-color: global.$color-error-light;
+  }
+}
+
+.AC-Button-text-error {
+  color: global.$color-error;
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    background-color: global.$color-error-light;
+  }
+}
+
+.AC-Button-small {
+  font-size: 12px;
+}
+
+.AC-Button-medium {
+  font-size: 16px;
+}
+
+.AC-Button-large {
+  font-size: 20px;
+}
+
+.AC-Button-leftIcon {
+  display: flex;
+  margin-right: 3px;
+
+  &.noMargin {
+    margin: 0;
+  }
+}
+
+.AC-Button-rightIcon {
+  display: flex;
+  margin-left: 3px;
+
+  &.noMargin {
+    margin: 0;
+  }
+}
+
+.AC-Button-iconButton {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
