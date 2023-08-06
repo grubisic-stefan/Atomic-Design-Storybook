@@ -1,9 +1,4 @@
 {
-  "name": "@antech-consulting/components",
-  "version": "0.3.93",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "description": "A react component library",
   "scripts": {
     "build": "rollup -c",
