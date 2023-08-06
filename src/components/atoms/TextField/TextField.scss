@@ -1,0 +1,616 @@
+@use "../../../utils/globalVariables" as global;
+
+// Root start
+.TextField-root {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 8px;
+  width: 25ch;
+
+  &:not(.TextField--disabled):active {
+    .TextField-label {
+      color: global.$color-primary;
+    }
+  }
+
+  // Focus & Active start
+  &.focused,
+  &:active {
+    .TextField-label {
+      color: global.$color-primary;
+    }
+
+    .TextField-input {
+      &::placeholder {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  // Focused & Active end
+}
+// Root end
+
+// Label start
+.TextField-label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  letter-spacing: 0.00938em;
+  max-width: calc(100% - 24px);
+  transform-origin: top left;
+  transform: translate(14px, 12px) scale(1);
+  pointer-events: none;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s;
+  padding: 0;
+  user-select: none;
+  z-index: 1;
+
+  &.focused,
+  &.input-has-value {
+    transform: translate(14px, -8px) scale(0.75) !important;
+    max-width: calc(133% - 24px);
+  }
+}
+// Label end
+
+// Input start
+.InputBase-root {
+  position: relative;
+}
+.TextField-input {
+  letter-spacing: inherit;
+  color: currentColor;
+  border: 0;
+  background: none;
+  margin: 0;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+
+  &.TextField-input-has-label {
+    &::placeholder {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+  }
+}
+// Input end
+
+// FullWidth start
+.TextField--fullWidth {
+  width: 100%;
+  margin: 0;
+}
+// FullWidth end
+
+// Color start
+.TextField-color-primary {
+  &.focused,
+  &:active {
+    .TextField-label {
+      color: global.$color-primary !important;
+    }
+    .TextField-input {
+      outline: none;
+      border-color: global.$color-primary !important;
+    }
+  }
+
+  .TextField-input {
+    outline: none;
+    border-color: global.$color-primary !important;
+  }
+}
+
+.TextField-color-secondary {
+  &.focused,
+  &:active {
+    .TextField-label {
+      color: global.$color-secondary !important;
+    }
+    .TextField-input {
+      outline: none;
+      border-color: global.$color-secondary !important;
+    }
+  }
+
+  .TextField-input {
+    outline: none;
+    border-color: global.$color-secondary !important;
+  }
+
+  &.TextField-filled,
+  &.TextField-standard {
+    .InputBase-root {
+      &::after {
+        border-bottom-color: global.$color-secondary;
+      }
+    }
+  }
+
+  .TextField-fieldset {
+    border-color: global.$color-secondary !important;
+  }
+}
+
+.TextField-color-success {
+  &.focused,
+  &:active {
+    .TextField-label {
+      color: global.$color-success !important;
+    }
+    .TextField-input {
+      outline: none;
+      border-color: global.$color-success !important;
+    }
+  }
+
+  .TextField-label {
+    color: global.$color-success;
+  }
+  .TextField-input {
+    outline: none;
+    border-color: global.$color-success !important;
+  }
+
+  &.TextField-filled,
+  &.TextField-standard {
+    .InputBase-root {
+      &::after {
+        border-bottom-color: global.$color-success;
+      }
+    }
+  }
+
+  .TextField-fieldset {
+    border-color: global.$color-success !important;
+  }
+}
+
+.TextField-color-error {
+  &.focused,
+  &:active {
+    .TextField-label {
+      color: global.$color-error !important;
+    }
+    .TextField-input {
+      outline: none;
+      border-color: global.$color-error !important;
+    }
+  }
+
+  .TextField-label {
+    color: global.$color-error;
+  }
+  .TextField-input {
+    outline: none;
+    border-color: global.$color-error !important;
+  }
+
+  &.TextField-filled,
+  &.TextField-standard {
+    .InputBase-root {
+      &::after {
+        border-bottom-color: global.$color-error;
+      }
+    }
+  }
+
+  .TextField-fieldset {
+    border-color: global.$color-error !important;
+  }
+}
+// Color end
+
+// Outlined start
+.TextField-outlined {
+  &:active {
+    .TextField-label {
+      transform: translate(14px, -8px) scale(0.75) !important;
+    }
+    .TextField-fieldset {
+      border-color: global.$color-primary;
+      border-width: 2px;
+
+      .TextField-legend {
+        max-width: 100%;
+      }
+      &.TextField-input-has-no-label {
+        .TextField-legend {
+          max-width: 0 !important;
+        }
+      }
+    }
+  }
+
+  .TextField-input {
+    padding: 16.5px 14px;
+  }
+  .TextField-fieldset {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: -5px;
+    left: 0;
+    margin: 0;
+    padding: 0 8px;
+    pointer-events: none;
+    border-radius: inherit;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    min-width: 0%;
+    border-color: rgba(0, 0, 0, 0.23);
+
+    .TextField-legend {
+      float: unset;
+      width: auto;
+      overflow: hidden;
+      display: block;
+      padding: 0;
+      height: 11px;
+      font-size: 0.75em;
+      visibility: hidden;
+      max-width: 0.01px;
+      white-space: nowrap;
+
+      .TextField-legend-span {
+        display: inline-block;
+        padding: 0 4px;
+        letter-spacing: 0.00938em;
+        opacity: 0;
+        visibility: visible;
+      }
+    }
+
+    &.focused {
+      border-color: global.$color-primary;
+      border-width: 2px;
+
+      .TextField-legend {
+        max-width: 100%;
+      }
+      &.TextField-input-has-no-label {
+        .TextField-legend {
+          max-width: 0 !important;
+        }
+      }
+    }
+
+    &.input-has-value {
+      .TextField-legend {
+        max-width: 100%;
+      }
+      &.TextField-input-has-no-label {
+        .TextField-legend {
+          max-width: 0 !important;
+        }
+      }
+    }
+  }
+}
+// Outnlined end
+
+// Filled start
+.TextField-filled {
+  &:active {
+    .TextField-label {
+      transform: translate(12px, 4px) scale(0.75);
+    }
+
+    .InputBase-root {
+      &::before {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.87);
+      }
+      &::after {
+        transform: scaleX(1) translateX(0);
+      }
+    }
+  }
+
+  &.focused {
+    .InputBase-root {
+      &::after {
+        transform: scaleX(1) translateX(0);
+      }
+    }
+  }
+
+  .InputBase-root {
+    &::before {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+      left: 0;
+      bottom: 0;
+      content: "\00a0";
+      position: absolute;
+      right: 0;
+      transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      pointer-events: none;
+    }
+
+    &::after {
+      border-bottom: 2px solid global.$color-primary;
+      left: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      right: 0;
+      transform: scaleX(0);
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::before {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.87);
+      }
+    }
+  }
+
+  .TextField-input {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    outline: none;
+    background-color: #f9f9f9;
+    padding: 25px 12px 8px;
+  }
+
+  .TextField-label {
+    background-color: transparent;
+    transform: translate(12px, 12px) scale(1);
+    &.focused,
+    &.input-has-value {
+      transform: translate(12px, 4px) scale(0.75) !important;
+    }
+  }
+}
+// Filled end
+
+// Standard start
+.TextField-standard {
+  &:active {
+    .TextField-label {
+      transform: translate(0, 0) scale(0.75);
+    }
+
+    .InputBase-root {
+      &::after {
+        transform: scaleX(1) translateX(0);
+      }
+    }
+  }
+
+  &.focused {
+    .InputBase-root {
+      &::after {
+        transform: scaleX(1) translateX(0);
+      }
+    }
+  }
+
+  .InputBase-root {
+    &:hover {
+      &::before {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+      }
+    }
+    &::before {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+      left: 0;
+      bottom: 0;
+      content: "\00a0";
+      position: absolute;
+      right: 0;
+      transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      pointer-events: none;
+    }
+
+    &::after {
+      border-bottom: 2px solid global.$color-primary;
+      left: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      right: 0;
+      transform: scaleX(0);
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+      pointer-events: none;
+    }
+  }
+
+  .InputBase-root {
+    margin-top: 16px;
+  }
+  .TextField-input {
+    outline: none;
+    padding: 4px 0 5px;
+  }
+  .TextField-label {
+    transform: translate(0px, 16px) scale(1);
+    padding: 0;
+
+    &.focused,
+    &.input-has-value {
+      transform: translate(0, 0) scale(0.75) !important;
+    }
+  }
+  .TextField-helper-text {
+    margin: 3px 0 0;
+  }
+}
+// Standard end
+
+// Helper text start
+.TextField-helper-text {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+  text-align: left;
+  margin: 3px 14px 0;
+}
+// Helper text end
+
+// Disabled start
+.TextField--disabled {
+  color: rgba(0, 0, 0, 0.38);
+  pointer-events: none;
+
+  &:active {
+    .TextField-label {
+      color: rgba(0, 0, 0, 0.38);
+    }
+
+    // outline disabled
+    &.TextField-outlined {
+      .TextField-label {
+        transform: translate(12px, 16px) scale(1);
+      }
+    }
+    // filled disabled
+    &.TextField-filled {
+      .TextField-label {
+        transform: translate(12px, 16px) scale(1);
+      }
+    }
+    // standard disabled
+    &.TextField-standard {
+      .TextField-label {
+        transform: translate(0px, 16px) scale(1);
+      }
+    }
+  }
+
+  .TextField-label {
+    color: rgba(0, 0, 0, 0.38);
+  }
+
+  // Outlined disabled
+  &.TextField-outlined {
+    .TextField-fieldset {
+      border-color: rgba(0, 0, 0, 0.38) !important;
+    }
+  }
+  // Filled disabled
+  &.TextField-filled {
+    &:hover {
+      .InputBase-root {
+        &::before {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.38) !important;
+          border-bottom-style: dotted;
+        }
+      }
+    }
+
+    .InputBase-root {
+      &::before {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.38) !important;
+        border-bottom-style: dotted !important;
+      }
+    }
+
+    .InputBase-root {
+      &::after {
+        display: none;
+      }
+    }
+
+    .TextField-input {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.12);
+      border: none;
+    }
+  }
+  // Standard disabled
+  &.TextField-standard {
+    &:hover {
+      .InputBase-root {
+        &::before {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+          border-bottom-style: dotted;
+        }
+      }
+    }
+
+    .InputBase-root {
+      &::before {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+        border-bottom-style: dotted;
+      }
+    }
+
+    .InputBase-root {
+      &::after {
+        display: none;
+      }
+    }
+
+    .TextField-input {
+      border: none;
+    }
+  }
+}
+// Disabled end
+
+// Error start
+.TextField--error {
+  .InputBase-root {
+    &::before {
+      border-bottom-color: global.$color-error;
+    }
+  }
+
+  &.focused {
+    .TextField-fieldset {
+      border-color: global.$color-error !important;
+    }
+    .TextField-label {
+      color: global.$color-error !important;
+    }
+  }
+
+  &:hover,
+  &:active {
+    .TextField-fieldset {
+      border-color: global.$color-error !important;
+    }
+    .TextField-label {
+      color: global.$color-error !important;
+    }
+  }
+
+  .TextField-label {
+    color: global.$color-error !important;
+  }
+
+  .TextField-helper-text {
+    color: global.$color-error !important;
+  }
+
+  .TextField-fieldset {
+    border-color: global.$color-error !important;
+  }
+
+  &.TextField-filled,
+  &.TextField-standard {
+    .InputBase-root {
+      &::before,
+      &::after {
+        border-bottom-color: global.$color-error !important;
+      }
+    }
+  }
+}
+// Error end

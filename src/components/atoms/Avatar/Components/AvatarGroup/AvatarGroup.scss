@@ -1,0 +1,12 @@
+.Avatar__group {
+  display: flex;
+}
+
+.Avatar__show-less {
+  cursor: pointer;
+  background-color: #cacaca;
+  transition: all 0.3s;
+  &:hover {
+    background-color: rgb(151, 66, 235);
+  }
+}

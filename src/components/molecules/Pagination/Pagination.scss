@@ -1,0 +1,108 @@
+@use "../../../utils/globalVariables" as global;
+
+.Pagination {
+  display: flex;
+  user-select: none;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+}
+
+.Pagination > * {
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+  border: 1px solid transparent;
+  box-sizing: content-box;
+
+  &:hover {
+    background-color: global.$color-gray-200;
+  }
+}
+
+.PaginationItem-selected-primary-text {
+  background-color: global.$color-primary;
+  color: white;
+
+  &:hover {
+    background-color: global.$color-primary;
+  }
+}
+
+.PaginationItem-selected-secondary-text {
+  background-color: global.$color-secondary;
+  color: white;
+
+  &:hover {
+    background-color: global.$color-secondary;
+  }
+}
+
+.PaginationItem-selected-primary-outlined {
+  border: 1px solid global.$color-primary;
+  color: black;
+  background-color: global.$color-primary-light;
+
+  &:hover {
+    background-color: global.$color-primary-light;
+  }
+}
+
+.PaginationItem-selected-secondary-outlined {
+  border: 1px solid global.$color-secondary;
+  background-color: global.$color-secondary-light;
+  color: black;
+
+  &:hover {
+    background-color: global.$color-secondary-light;
+  }
+}
+
+.Pagination > .disabled {
+  cursor: default;
+  color: global.$color-gray-300;
+  user-select: none;
+  pointer-events: none;
+  select &:hover {
+    background-color: transparent;
+  }
+}
+
+.Pagination-threeDots {
+  cursor: default;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.PaginationItem-shape-rounded {
+  border-radius: 10%;
+}
+
+.PaginationItem-shape-circular {
+  border-radius: 50%;
+}
+
+.PaginationItem-size-small {
+  font-size: 12px;
+  width: 15px;
+  height: 15px;
+}
+
+.PaginationItem-size-medium {
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.PaginationItem-size-large {
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+}
