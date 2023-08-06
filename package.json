@@ -6,12 +6,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@PS-ac:Antech-Consulting/react-components.git"
-  },
-  "author": "Antech Consulting",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
