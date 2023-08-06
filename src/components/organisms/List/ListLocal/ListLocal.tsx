@@ -6,7 +6,7 @@ export interface ListLocalProps extends StandardListProps {
   allItems: ListItem[];
 }
 
-const ACListLocal: FC<ListLocalProps> = ({
+const ListLocal: FC<ListLocalProps> = ({
   headerTitle,
   allItems,
   color = "primary",
@@ -60,4 +60,4 @@ const ACListLocal: FC<ListLocalProps> = ({
   );
 };
 
-export default ACListLocal;
+export default ListLocal;

@@ -1,6 +1,6 @@
 import React, { FC, Fragment, ReactNode } from "react";
 import Button from "../../../atoms/Button";
-import ACPagination from "../../../molecules/Pagination";
+import Pagination from "../../../molecules/Pagination";
 import { ACPaginationStyleProps } from "../../../molecules/Pagination/Pagination";
 import TextField from "../../../atoms/TextField";
 import "./ListBase.scss";
@@ -276,7 +276,7 @@ export const ListBase: FC<ListBaseProps> = ({
           {allItemsCount === 0 && <span> 0 results </span>}
         </div>
         {listViewOptions.pagination && pagesCount > 0 && (
-          <ACPagination
+          <Pagination
             color={color}
             {...paginationStyleProps}
             size="small"
