@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useDebounce } from "../../../../utils/hooks";
-import { ACListItem } from "../ListBase/ListBase";
+import { ListItem } from "../ListBase/ListBase";
 
-const useLocalList = (allItems: ACListItem[]) => {
+const useLocalList = (allItems: ListItem[]) => {
   const [rowsNumber, setRowsNumber] = useState(5);
   const [currentItems, setCurrentItems] = useState(allItems);
   const [sortedAllItems, setSortedAllItems] = useState(allItems);
@@ -60,8 +60,8 @@ const useLocalList = (allItems: ACListItem[]) => {
     const sortParameter = sort.field;
     const sortDirection = sort.type;
 
-    let sortedCurrentItems: ACListItem[] = [];
-    let sortedAllItems: ACListItem[] = [];
+    let sortedCurrentItems: ListItem[] = [];
+    let sortedAllItems: ListItem[] = [];
     if (sortParameter === "title" && sortDirection === "asc") {
       sortedAllItems.push(
         ...allItems.sort((a, b) => a.title.localeCompare(b.title))
