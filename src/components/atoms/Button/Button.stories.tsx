@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
@@ -11,19 +11,19 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => {
-  const buttonRef = useRef({} as HTMLButtonElement);
-
-  return (
-    <Button {...args} ref={buttonRef}>
-      Button
-    </Button>
-  );
+  return <Button {...args}>Button</Button>;
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
   onClick: () => alert("Button clicked"),
+  color: "primary",
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  onClick: () => alert("Button clicked"),
   leftIcon: <FaArrowLeft />,
   rightIcon: <FaArrowRight />,
-  color: "primary",
+  color: "secondary",
 };

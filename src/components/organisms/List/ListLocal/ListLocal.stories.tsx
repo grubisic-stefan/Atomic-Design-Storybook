@@ -4,7 +4,7 @@ import ListLocal from "./ListLocal";
 import { MdAdd, MdInfo, MdDelete, MdEdit } from "react-icons/md";
 
 export default {
-  title: "Organisms/ListLocal",
+  title: "Organisms/List",
   component: ListLocal,
 } as ComponentMeta<typeof ListLocal>;
 

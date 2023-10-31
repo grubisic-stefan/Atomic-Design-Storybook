@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Avatar, Button } from "../../../../atoms";
+import { Button } from "../../../../atoms";
 
 const StyledFooter = styled.div`
   display: flex;

@@ -70,5 +70,4 @@ const Card = ({
     </StyledCard>
   );
 };
-
 export default Card;

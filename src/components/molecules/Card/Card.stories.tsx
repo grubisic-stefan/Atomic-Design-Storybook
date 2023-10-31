@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import React, { useState } from "react";
-import { ACAvatar } from "../../atoms";
+import React from "react";
 import Card from "./Card";
 import BasicBody from "./components/BasicCard/BasicBody";
 import BasicFooter from "./components/BasicCard/BasicFooter";
@@ -10,7 +9,7 @@ import ImageFooter from "./components/ImageCard/ImageFooter";
 import ImageHeader from "./components/ImageCard/ImageHeader";
 
 export default {
-  title: "molecules/ACCard",
+  title: "molecules/Card",
   component: Card,
 } as ComponentMeta<typeof Card>;
 
